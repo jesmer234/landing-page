@@ -1,0 +1,40 @@
+<div class="max-w-[1440px] mx-auto">
+  <div class="py-4 px-4 lg:px-0 flex justify-between items-center">
+    <img src="../../assets/logo.png" class="w-32 h-24" />
+    <div class="hidden lg:block">
+      <ul class="flex items-center">
+        <li class="px-4 cursor-pointer">Home</li>
+        <li class="px-4 cursor-pointer">About Us</li>
+        <li class="px-4 cursor-pointer">Services</li>
+        <li class="px-4 cursor-pointer">Page</li>
+        <li class="px-4 cursor-pointer">Contact</li>
+        <div
+          class="px-4 border-2 border-[#F65E35] bg-[#F65E35] hover:bg-white rounded-lg text-white hover:text-black cursor-pointer transform duration-200 ease-in"
+        >
+          <button class="py-1 px-3 uppercase">Log in</button>
+        </div>
+      </ul>
+    </div>
+    <div class="block lg:hidden">
+      <button (click)="toggle()">
+        <fa-icon [icon]="faBars" class="text-4xl text-[#F65E35]"></fa-icon>
+      </button>
+    </div>
+  </div>
+  <ng-container *ngIf="show">
+    <div class="absolute bg-gray-100 w-full">
+      <ul class="py-4">
+        <li class="px-4 my-2 cursor-pointer">Home</li>
+        <li class="px-4 my-2 cursor-pointer">About Us</li>
+        <li class="px-4 my-2 cursor-pointer">Services</li>
+        <li class="px-4 my-2 cursor-pointer">Page</li>
+        <li class="px-4 my-2 cursor-pointer">Contact</li>
+        <div
+          class="my-2 mx-4 px-4 border-2 border-[#F65E35] bg-[#F65E35] rounded-lg text-white hover:text-black cursor-pointer transform duration-200 ease-in"
+        >
+          <button class="py-1 uppercase">Log in</button>
+        </div>
+      </ul>
+    </div>
+  </ng-container>
+</div>
